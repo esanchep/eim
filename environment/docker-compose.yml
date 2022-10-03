@@ -1,0 +1,27 @@
+version: "3.3"
+services:
+  mysql-device:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_USER=eimusername
+      - MYSQL_PASSWORD=eimpassword
+      - MYSQL_DATABASE=eim_database
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./volume/device:/var/lib/mysql
+
+  mysql-profile:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_USER=eimusername
+      - MYSQL_PASSWORD=eimpassword
+      - MYSQL_DATABASE=eim_database
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./volume/profile:/var/lib/mysql

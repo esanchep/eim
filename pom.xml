@@ -5,10 +5,9 @@
 	<packaging>pom</packaging>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>com.gi_de.eim</groupId>
+		<artifactId>eim-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.eim</groupId>
@@ -18,11 +17,11 @@
 	<description>Demo project for Spring Boot</description>
 
 	<modules>
-		<module>device-server</module>
 		<module>device-communication-server</module>
-        <module>event-library</module>
 		<module>utils</module>
-    </modules>
+        <module>profile-server</module>
+		<module>event-server</module>
+	</modules>
 
 	<properties>
 		<java.version>17</java.version>
@@ -35,10 +34,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 		<dependency>

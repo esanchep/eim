@@ -10,7 +10,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>device-communication-server</artifactId>
+    <artifactId>event-server</artifactId>
 
     <dependencies>
         <dependency>

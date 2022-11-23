@@ -2,6 +2,7 @@ version: "3.3"
 services:
   mysql-device:
     image: mysql
+    container_name: mysql-device
     restart: always
     environment:
       - MYSQL_USER=eimusername
@@ -15,6 +16,7 @@ services:
 
   mysql-profile:
     image: mysql
+    container_name: mysql-profile
     restart: always
     environment:
       - MYSQL_USER=eimusername
@@ -25,3 +27,12 @@ services:
       - "3307:3306"
     volumes:
       - ./volume/profile:/var/lib/mysql
+
+  activemq:
+    image: nexus.muc.ssdn.accounts.intern:40100/rmohr/activemq:latest
+    container_name: activemq
+    restart: always
+    ports:
+      - "8161:8161" # web interface
+      - "9876:9876" # broker
+      - "61616:61616"
